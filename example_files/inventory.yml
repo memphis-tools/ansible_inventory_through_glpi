@@ -1,0 +1,475 @@
+all:
+  children:
+    active:
+      hosts:
+        ansible.proxlab: {}
+        dhcp.proxlab: {}
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+        docker1.proxlab: {}
+        docker2.proxlab: {}
+        docker3.proxlab: {}
+        docker4.proxlab: {}
+        docker5.proxlab: {}
+        dovecot.proxlab: {}
+        elastic1.proxlab: {}
+        elastic2.proxlab: {}
+        elastic3.proxlab: {}
+        elastic4.proxlab: {}
+        galera1.proxlab: {}
+        galera2.proxlab: {}
+        galera3.proxlab: {}
+        games.proxlab: {}
+        games2.proxlab: {}
+        gitlab.proxlab: {}
+        glpi.proxlab: {}
+        ha1.proxlab: {}
+        ha2.proxlab: {}
+        ha3.proxlab: {}
+        haproxy.proxlab: {}
+        idm.proxlab: {}
+        jenkins.proxlab: {}
+        kafka.proxlab: {}
+        kibana.proxlab: {}
+        ldap.proxlab: {}
+        logstash.proxlab: {}
+        mariadb-glpi.proxlab: {}
+        mariadb-rundeck.proxlab: {}
+        maxscale.proxlab: {}
+        mediawiki.proxlab: {}
+        memcached.proxlab: {}
+        nagios.proxlab: {}
+        nas.proxlab: {}
+        nexus.proxlab: {}
+        openscap.proxlab: {}
+        openvas.proxlab: {}
+        pcs1.proxlab: {}
+        pcs2.proxlab: {}
+        raspi1.proxlab: {}
+        raspi2.proxlab: {}
+        rundeck.proxlab: {}
+        squid.proxlab: {}
+        varnish.proxlab: {}
+        wildfly.proxlab: {}
+    cerebro:
+      hosts:
+        docker4.proxlab: {}
+    database_admin:
+      hosts:
+        galera1.proxlab: {}
+        galera2.proxlab: {}
+        galera3.proxlab: {}
+        gitlab.proxlab: {}
+        ha1.proxlab: {}
+        ha2.proxlab: {}
+        ha3.proxlab: {}
+        jenkins.proxlab: {}
+        mariadb-glpi.proxlab: {}
+        mariadb-rundeck.proxlab: {}
+        maxscale.proxlab: {}
+    datacenter_bordeaux:
+      hosts:
+        docker1.proxlab: {}
+        docker2.proxlab: {}
+        docker3.proxlab: {}
+        gitlab.proxlab: {}
+        jenkins.proxlab: {}
+        nas.proxlab: {}
+        openvas.proxlab: {}
+        pcs1.proxlab: {}
+        pcs2.proxlab: {}
+    datacenter_nogent:
+      hosts:
+        ansible.proxlab: {}
+        dhcp.proxlab: {}
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+        docker4.proxlab: {}
+        docker5.proxlab: {}
+        dovecot.proxlab: {}
+        elastic1.proxlab: {}
+        elastic2.proxlab: {}
+        elastic3.proxlab: {}
+        elastic4.proxlab: {}
+        galera1.proxlab: {}
+        galera2.proxlab: {}
+        galera3.proxlab: {}
+        games.proxlab: {}
+        games2.proxlab: {}
+        glpi.proxlab: {}
+        ha1.proxlab: {}
+        ha2.proxlab: {}
+        ha3.proxlab: {}
+        haproxy.proxlab: {}
+        idm.proxlab: {}
+        kafka.proxlab: {}
+        kibana.proxlab: {}
+        ldap.proxlab: {}
+        logstash.proxlab: {}
+        mariadb-glpi.proxlab: {}
+        mariadb-rundeck.proxlab: {}
+        maxscale.proxlab: {}
+        mediawiki.proxlab: {}
+        memcached.proxlab: {}
+        nagios.proxlab: {}
+        nexus.proxlab: {}
+        openscap.proxlab: {}
+        raspi1.proxlab: {}
+        raspi2.proxlab: {}
+        rundeck.proxlab: {}
+        squid.proxlab: {}
+        varnish.proxlab: {}
+        wildfly.proxlab: {}
+    developper:
+      hosts:
+        docker1.proxlab: {}
+        docker2.proxlab: {}
+        docker3.proxlab: {}
+        docker4.proxlab: {}
+        docker5.proxlab: {}
+        games.proxlab: {}
+        games2.proxlab: {}
+        haproxy.proxlab: {}
+        nexus.proxlab: {}
+        raspi1.proxlab: {}
+        raspi2.proxlab: {}
+        varnish.proxlab: {}
+        wildfly.proxlab: {}
+    devops_team:
+      hosts:
+        ansible.proxlab: {}
+        memcached.proxlab: {}
+        squid.proxlab: {}
+    dns:
+      hosts:
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+    elastic_stack:
+      hosts:
+        elastic1.proxlab: {}
+        elastic2.proxlab: {}
+        elastic3.proxlab: {}
+        elastic4.proxlab: {}
+    games:
+      hosts:
+        games.proxlab: {}
+        games2.proxlab: {}
+    gluster_cluster:
+      hosts:
+        ha1.proxlab: {}
+        ha2.proxlab: {}
+        ha3.proxlab: {}
+    grafana:
+      hosts:
+        raspi2.proxlab: {}
+    infra_devops:
+      hosts:
+        ansible.proxlab: {}
+        dhcp.proxlab: {}
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+        dovecot.proxlab: {}
+        gitlab.proxlab: {}
+        idm.proxlab: {}
+        ldap.proxlab: {}
+        nexus.proxlab: {}
+        rundeck.proxlab: {}
+    linux:
+      children:
+        centos:
+          children:
+            centos_7:
+              children:
+                centos_7_9:
+                  hosts:
+                    docker1.proxlab:
+                      ansible_host: 192.168.2.223
+                    docker2.proxlab:
+                      ansible_host: 192.168.2.116
+                    docker3.proxlab:
+                      ansible_host: 192.168.2.117
+                    gitlab.proxlab:
+                      ansible_host: 192.168.2.203
+                    nas.proxlab:
+                      ansible_host: 192.168.2.225
+                    openvas.proxlab:
+                      ansible_host: 192.168.2.9
+                    pcs1.proxlab:
+                      ansible_host: 192.168.2.226
+                    pcs2.proxlab:
+                      ansible_host: 192.168.2.227
+              hosts:
+                docker1.proxlab: {}
+                docker2.proxlab: {}
+                docker3.proxlab: {}
+                gitlab.proxlab: {}
+                nas.proxlab: {}
+                openvas.proxlab: {}
+                pcs1.proxlab: {}
+                pcs2.proxlab: {}
+            centos_8:
+              children:
+                centos_8_0:
+                  hosts:
+                    jenkins.proxlab:
+                      ansible_host: 192.168.2.118
+              hosts:
+                jenkins.proxlab: {}
+        debian:
+          children:
+            debian_11:
+              children:
+                debian_11_7:
+                  hosts:
+                    dns2.proxlab:
+                      ansible_host: 192.168.2.201
+                debian_11_8:
+                  hosts:
+                    ansible.proxlab:
+                      ansible_host: 192.168.2.217
+                    dhcp.proxlab:
+                      ansible_host: 192.168.2.2
+                    dns1.proxlab:
+                      ansible_host: 192.168.2.200
+                    dns3.proxlab:
+                      ansible_host: 192.168.2.80
+                    glpi.proxlab:
+                      ansible_host: 192.168.2.111
+                    ldap.proxlab:
+                      ansible_host: 192.168.2.100
+                    mariadb-glpi.proxlab:
+                      ansible_host: 192.168.2.112
+                    nagios.proxlab:
+                      ansible_host: 192.168.2.110
+                    openscap.proxlab:
+                      ansible_host: 192.168.2.220
+              hosts:
+                ansible.proxlab: {}
+                dhcp.proxlab: {}
+                dns1.proxlab: {}
+                dns2.proxlab: {}
+                dns3.proxlab: {}
+                glpi.proxlab: {}
+                ldap.proxlab: {}
+                mariadb-glpi.proxlab: {}
+                nagios.proxlab: {}
+                openscap.proxlab: {}
+        rocky:
+          children:
+            rocky_9:
+              children:
+                rocky_9_0:
+                  hosts:
+                    dovecot.proxlab:
+                      ansible_host: 192.168.2.236
+                    elastic1.proxlab:
+                      ansible_host: 192.168.2.25
+                    elastic2.proxlab:
+                      ansible_host: 192.168.2.191
+                    elastic3.proxlab:
+                      ansible_host: 192.168.2.43
+                    elastic4.proxlab:
+                      ansible_host: 192.168.2.190
+                    galera1.proxlab:
+                      ansible_host: 192.168.2.135
+                    galera2.proxlab:
+                      ansible_host: 192.168.2.136
+                    galera3.proxlab:
+                      ansible_host: 192.168.2.137
+                    games2.proxlab:
+                      ansible_host: 192.168.2.114
+                    kafka.proxlab:
+                      ansible_host: 192.168.2.81
+                    maxscale.proxlab:
+                      ansible_host: 192.168.2.138
+                    memcached.proxlab:
+                      ansible_host: 192.168.2.231
+                    varnish.proxlab:
+                      ansible_host: 192.168.2.115
+                rocky_9_2:
+                  hosts:
+                    docker4.proxlab:
+                      ansible_host: 192.168.2.230
+                    haproxy.proxlab:
+                      ansible_host: 192.168.2.229
+                    mediawiki.proxlab:
+                      ansible_host: 192.168.2.235
+                    rundeck.proxlab:
+                      ansible_host: 192.168.2.209
+                    squid.proxlab:
+                      ansible_host: 192.168.2.232
+                    wildfly.proxlab:
+                      ansible_host: 192.168.2.216
+                rocky_9_3:
+                  hosts:
+                    docker5.proxlab:
+                      ansible_host: 192.168.2.119
+                    games.proxlab:
+                      ansible_host: 192.168.2.233
+                    ha1.proxlab:
+                      ansible_host: 192.168.2.214
+                    ha2.proxlab:
+                      ansible_host: 192.168.2.215
+                    ha3.proxlab:
+                      ansible_host: 192.168.2.121
+                    idm.proxlab:
+                      ansible_host: 192.168.2.234
+                    kibana.proxlab:
+                      ansible_host: 192.168.2.47
+                    logstash.proxlab:
+                      ansible_host: 192.168.2.58
+                    mariadb-rundeck.proxlab:
+                      ansible_host: 192.168.2.208
+                    nexus.proxlab:
+                      ansible_host: 192.168.2.212
+              hosts:
+                docker4.proxlab: {}
+                docker5.proxlab: {}
+                dovecot.proxlab: {}
+                elastic1.proxlab: {}
+                elastic2.proxlab: {}
+                elastic3.proxlab: {}
+                elastic4.proxlab: {}
+                galera1.proxlab: {}
+                galera2.proxlab: {}
+                galera3.proxlab: {}
+                games.proxlab: {}
+                games2.proxlab: {}
+                ha1.proxlab: {}
+                ha2.proxlab: {}
+                ha3.proxlab: {}
+                haproxy.proxlab: {}
+                idm.proxlab: {}
+                kafka.proxlab: {}
+                kibana.proxlab: {}
+                logstash.proxlab: {}
+                mariadb-rundeck.proxlab: {}
+                maxscale.proxlab: {}
+                mediawiki.proxlab: {}
+                memcached.proxlab: {}
+                nexus.proxlab: {}
+                rundeck.proxlab: {}
+                squid.proxlab: {}
+                varnish.proxlab: {}
+                wildfly.proxlab: {}
+        ubuntu:
+          children:
+            ubuntu_22:
+              children:
+                ubuntu_22_04:
+                  hosts:
+                    raspi1.proxlab:
+                      ansible_host: 192.168.2.18
+                    raspi2.proxlab:
+                      ansible_host: 192.168.2.19
+              hosts:
+                raspi1.proxlab: {}
+                raspi2.proxlab: {}
+      hosts:
+        ansible.proxlab: {}
+        dhcp.proxlab: {}
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+        docker1.proxlab: {}
+        docker2.proxlab: {}
+        docker3.proxlab: {}
+        docker4.proxlab: {}
+        docker5.proxlab: {}
+        dovecot.proxlab: {}
+        elastic1.proxlab: {}
+        elastic2.proxlab: {}
+        elastic3.proxlab: {}
+        elastic4.proxlab: {}
+        galera1.proxlab: {}
+        galera2.proxlab: {}
+        galera3.proxlab: {}
+        games.proxlab: {}
+        games2.proxlab: {}
+        gitlab.proxlab: {}
+        glpi.proxlab: {}
+        ha1.proxlab: {}
+        ha2.proxlab: {}
+        ha3.proxlab: {}
+        haproxy.proxlab: {}
+        idm.proxlab: {}
+        jenkins.proxlab: {}
+        kafka.proxlab: {}
+        kibana.proxlab: {}
+        ldap.proxlab: {}
+        logstash.proxlab: {}
+        mariadb-glpi.proxlab: {}
+        mariadb-rundeck.proxlab: {}
+        maxscale.proxlab: {}
+        mediawiki.proxlab: {}
+        memcached.proxlab: {}
+        nagios.proxlab: {}
+        nas.proxlab: {}
+        nexus.proxlab: {}
+        openscap.proxlab: {}
+        openvas.proxlab: {}
+        pcs1.proxlab: {}
+        pcs2.proxlab: {}
+        raspi1.proxlab: {}
+        raspi2.proxlab: {}
+        rundeck.proxlab: {}
+        squid.proxlab: {}
+        varnish.proxlab: {}
+        wildfly.proxlab: {}
+    monitoring_admin:
+      hosts:
+        nagios.proxlab: {}
+    nas:
+      hosts:
+        nas.proxlab: {}
+    pcsd_cluster:
+      hosts:
+        pcs1.proxlab: {}
+        pcs2.proxlab: {}
+    proxlab_teams:
+      hosts:
+        dovecot.proxlab: {}
+        mediawiki.proxlab: {}
+        rundeck.proxlab: {}
+    raspi:
+      hosts:
+        raspi1.proxlab: {}
+        raspi2.proxlab: {}
+    security_admin:
+      hosts:
+        elastic1.proxlab: {}
+        elastic2.proxlab: {}
+        elastic3.proxlab: {}
+        elastic4.proxlab: {}
+        kafka.proxlab: {}
+        kibana.proxlab: {}
+        logstash.proxlab: {}
+        openscap.proxlab: {}
+        openvas.proxlab: {}
+    shields:
+      hosts:
+        docker4.proxlab: {}
+    swarm_managers:
+      hosts:
+        docker1.proxlab: {}
+    swarm_workers:
+      hosts:
+        docker2.proxlab: {}
+        docker3.proxlab: {}
+        docker5.proxlab: {}
+    sys_admin_linux:
+      hosts:
+        dhcp.proxlab: {}
+        dns1.proxlab: {}
+        dns2.proxlab: {}
+        dns3.proxlab: {}
+        glpi.proxlab: {}
+        idm.proxlab: {}
+        ldap.proxlab: {}
+        nas.proxlab: {}
+        pcs1.proxlab: {}
+        pcs2.proxlab: {}

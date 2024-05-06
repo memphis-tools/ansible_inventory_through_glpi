@@ -1,0 +1,4 @@
+exclude_paths:
+  - .cache/
+  - excluded_linux_hosts.yml
+  - .github/workflows/

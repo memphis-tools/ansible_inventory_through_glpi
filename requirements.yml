@@ -1,0 +1,4 @@
+---
+# This is used during the ansible-lint own testing.
+collections:
+  - community.general

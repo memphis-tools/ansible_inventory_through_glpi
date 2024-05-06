@@ -1,0 +1,32 @@
+---
+- name: "Block to delegate tasks to localhost"
+  delegate_to: localhost
+  block:
+    - name: "{{ make_inventory_inventory_file_treatment_type_option_1_mail }}"
+      community.general.mail:
+        host: '{{ make_inventory_smtp_host }}'
+        port: '{{ make_inventory_smtp_port }}'
+        subject: '[Ansible] New inventory'
+        subtype: html
+        body: |
+          <p style="color:DarkBlue">Bonjour,<br>
+          Inventaire au format yaml en pièce jointe.<br>
+          Cordialement.<br>
+          Proxlab Team<br>
+          </p>
+        from: '{{ make_inventory_smtp_from }}'
+        to: '{{ make_inventory_smtp_to }}'
+        attach: '{{ make_inventory_temp_yaml_inventory_output_file_path }}'
+      when: 'make_inventory_inventory_file_treatment_type == make_inventory_inventory_file_treatment_type_option_1_mail'
+
+    - name: "{{ make_inventory_inventory_file_treatment_type_option_2_file }}"
+      ansible.builtin.copy:
+        src: '{{ make_inventory_temp_yaml_inventory_output_file_path }}'
+        dest: '{{ make_inventory_yaml_inventory_output_file_path }}'
+        mode: '0644'
+      when: 'make_inventory_inventory_file_treatment_type == make_inventory_inventory_file_treatment_type_option_2_file'
+
+    - name: "{{ make_inventory_inventory_file_treatment_type_option_3_git }}"
+      ansible.builtin.debug:
+        msg: 'Do some git stuff Sir'
+      when: 'make_inventory_inventory_file_treatment_type == make_inventory_inventory_file_treatment_type_option_3_git'

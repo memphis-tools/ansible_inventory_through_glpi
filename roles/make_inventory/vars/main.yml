@@ -1,0 +1,31 @@
+---
+# IF DEBUG_MODE True WE DO NOT REMOVE THE TEMP FILES
+make_inventory_debug_mode: false
+
+# GLPI API SETTINGS
+make_inventory_api_url: "https://glpi.proxlab/apirest.php"
+make_inventory_app_token: "N7KAbDk2q4XrhI26mIly2AZGxtJPevZArptDG10M"
+make_inventory_user_token: "g5mRSJjrEKhO3GvjGVz5HysKKfSJWWqScaAE3B18"
+make_inventory_max_glpi_computers_in_request: "99999999999"
+make_inventory_temp_glpi_computers_output_file_path: "/tmp/glpi_linux_computers_dict.json"
+
+# NAME OF THE PYTHON'S INVENTORY FILE MAKER SCRIPT
+make_inventory_inventory_maker_script_file_path: "./make_inventory.py"
+
+# PATH TO A FILE WHICH DEFINES THE HOSTS TO EXCLUDE FROM INVENTORY
+make_inventory_hosts_to_exclude_from_inventory_file_path: "./excluded_linux_hosts.yml"
+
+# SET A SWITCH FOR USER ABLE TO DO STUFF WITH INVENTORY FILE
+make_inventory_inventory_file_treatment_type: "{{ make_inventory_inventory_file_treatment_type_option_2_file }}"
+make_inventory_inventory_file_treatment_type_option_1_mail: "EMAIL"
+make_inventory_smtp_host: "dovecot.proxlab"
+make_inventory_smtp_port: "25"
+make_inventory_smtp_from: "inventory_maker"
+make_inventory_smtp_to: "donald"
+make_inventory_inventory_file_treatment_type_option_2_file: "FILE"
+make_inventory_yaml_inventory_output_file_path: "inventory/inventory.yml"
+make_inventory_inventory_file_treatment_type_option_3_git: "GIT"
+make_inventory_git_repository_url: ""
+
+make_inventory_temp_ini_inventory_output_file_path: "/tmp/inventory.ini"
+make_inventory_temp_yaml_inventory_output_file_path: "/tmp/inventory.yml"
