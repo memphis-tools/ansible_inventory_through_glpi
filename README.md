@@ -69,12 +69,6 @@ Based on the Ansible role's vars the inventory.yml is either copied into invento
 
   **Pay attention to the datas presentation.**
 
-- Update the Ansible role's vars:
-    - make_inventory_api_url
-    - make_inventory_app_token
-    - make_inventory_user_token
-    - make_inventory_smtp_host (optional)
-
 # What we expect from the Ansible inventory file
 
 To respect the traditional syntax. In order to control it we convert the ".ini" into ".yml".
@@ -87,7 +81,7 @@ We want to use group_vars and host_vars. By default you will have several exampl
 
 Ansible group_vars must not contain the "." character.
 
-## About example files
+# About example files
 
 You have several examples:
 
@@ -145,6 +139,12 @@ By default the script outputs the dataframe before and after formatting.
   source venv/bin/activate
 
   pip install -r requirements.txt
+
+- Update the Ansible role's vars:
+    - make_inventory_api_url
+    - make_inventory_app_token
+    - make_inventory_user_token
+    - make_inventory_smtp_host (optional)
 
 - Execute:
 
