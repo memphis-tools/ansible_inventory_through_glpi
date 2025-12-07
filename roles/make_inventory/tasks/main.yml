@@ -12,27 +12,27 @@
           App-Token: "{{ make_inventory_app_token }}"
         validate_certs: true
         status_code: 200
-      register: api_init
+      register: make_inventory_api_init
 
     - name: Get actives linux computers
       ansible.builtin.uri:
         headers:
           App-Token: '{{ make_inventory_app_token }}'
-          Session-Token: '{{ api_init.json["session_token"] }}'
+          Session-Token: '{{ make_inventory_api_init.json["session_token"] }}'
         method: "GET"
         url: "{{ make_inventory_api_url }}/search/Computer?criteria[0][itemtype]=Computer\
           &criteria[0][field]=901&criteria[0][searchtype]=contains&criteria[0][value]=linux&criteria[0][link]=and\
           &criteria[1][field]=31&criteria[1][searchtype]=contains&criteria[1][value]=active&criteria[1][link]\
-          &range=0-{{ make_inventory_max_glpi_computers_in_request }}"
+          &range=0-{{ make_inventory_max_make_inventory_glpi_computers_in_request }}"
         validate_certs: true
         status_code: 200
-      register: glpi_computers
+      register: make_inventory_glpi_computers
 
     - name: Kill the session
       ansible.builtin.uri:
         headers:
           App-Token: '{{ make_inventory_app_token }}'
-          Session-Token: '{{ api_init.json["session_token"] }}'
+          Session-Token: '{{ make_inventory_api_init.json["session_token"] }}'
         method: "GET"
         url: "{{ make_inventory_api_url }}/killSession"
         validate_certs: true
@@ -40,8 +40,8 @@
 
     - name: Save computers into a temp file
       ansible.builtin.copy:
-        content: "{{ glpi_computers.json }}"
-        dest: "{{ make_inventory_temp_glpi_computers_output_file_path }}"
+        content: "{{ make_inventory_glpi_computers.json }}"
+        dest: "{{ make_inventory_temp_make_inventory_glpi_computers_output_file_path }}"
         mode: '0644'
 
     - name: Call the Python inventory file maker
@@ -65,7 +65,7 @@
         path: "{{ item }}"
         state: absent
       with_items:
-        - "{{ make_inventory_temp_glpi_computers_output_file_path }}"
+        - "{{ make_inventory_temp_make_inventory_glpi_computers_output_file_path }}"
         - "{{ make_inventory_temp_ini_inventory_output_file_path }}"
         - "{{ make_inventory_temp_yaml_inventory_output_file_path }}"
       when: not make_inventory_debug_mode

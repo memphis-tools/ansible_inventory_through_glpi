@@ -1,4 +1,4 @@
-""" The script generates a formated ini inventory """
+"""The script generates a formated ini inventory"""
 
 import json
 import pandas as pd
