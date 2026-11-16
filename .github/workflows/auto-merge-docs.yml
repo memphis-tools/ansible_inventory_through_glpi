@@ -13,7 +13,8 @@ jobs:
     if: |
       startsWith(github.head_ref, 'docs/') ||
       startsWith(github.head_ref, 'vibe/') ||
-      startsWith(github.head_ref, '[Aikido] AI Fix')
+      startsWith(github.head_ref, '[Snyk]') ||
+      startsWith(github.head_ref, '[Aikido]')
     runs-on: ubuntu-latest
     steps:
       - name: Enable auto-merge
