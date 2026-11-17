@@ -2,7 +2,7 @@
 # IF DEBUG_MODE True WE DO NOT REMOVE THE TEMP FILES
 make_inventory_debug_mode: false
 
-# GLPI API SETTINGS
+# GLPI API SETTINGS (remember these are all dummy example values)
 make_inventory_api_url: "https://glpi.proxlab/apirest.php"
 make_inventory_app_token: "N7KAbDk2q4XrhI26mIly2AZGxtJPevZArptDG10M"
 make_inventory_user_token: "g5mRSJjrEKhO3GvjGVz5HysKKfSJWWqScaAE3B18"
